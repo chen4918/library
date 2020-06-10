@@ -3,12 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>Project: Library</title>
-  <link href="reset.css" rel="stylesheet" type="text/css" media="all">
-  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="styles/reset.css" rel="stylesheet" type="text/css" media="all">
+  <link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body>
+<header>
 <h1>Project: Library</h1>
+</header>
+
+<main>
+  <div class="input-container">
+    <div class="form-container">
+      <form>
+        <input type="text" id="bookTitle" placeholder="Title" required>
+        <input type="text" id="bookAuthor" placeholder="Author" required>
+        <input type="text" id="bookPages" placeholder="Number of pages" required>
+        <label for="bookReadStatus">Have you read this book?</label><br>
+        <select id="bookReadStatus" required>
+          <option id="optionNo" value="No">No</option>
+          <option id="optionYes" value="Yes">Yes</option>
+          <option id="optionInProgress" value="In progress">In progress</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="button-container">
+      <button type="button" id="addToBookListButton">Add to library</button>
+    </div>
+  </div>
+
+  <div class="library-container">
+    <div class="library-table">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Read?</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>By David Chen, 2020</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
